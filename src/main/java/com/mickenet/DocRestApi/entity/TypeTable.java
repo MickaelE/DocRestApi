@@ -1,14 +1,24 @@
-package com.mickenet.DocRestApi.dto;
+package com.mickenet.DocRestApi.entity;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 
-public class TypeTableDTO {
+@Entity
+@Table(name = "TYPE_TABLE")
+public class TypeTable {
+    @Id
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "TYPE_NAME")
     private String typeName;
+
+    @Column(name = "DATE_CREATED")
     private Timestamp dateCreated;
 
+
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -16,7 +26,7 @@ public class TypeTableDTO {
     }
 
     public String getTypeName() {
-        return typeName;
+        return this.typeName;
     }
 
     public void setTypeName(String typeName) {
@@ -24,7 +34,7 @@ public class TypeTableDTO {
     }
 
     public Timestamp getDateCreated() {
-        return dateCreated;
+        return this.dateCreated;
     }
 
     public void setDateCreated(Timestamp dateCreated) {
