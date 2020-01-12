@@ -1,64 +1,65 @@
 package com.mickenet.DocRestApi.entity;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "USER_TABLE")
 public class UserTable {
     @Id
     @Column(name = "id")
-    private null id;
+    private int id;
 
     @Column(name = "USER_NAME")
-    private null userName;
+    private String userName;
 
     @Column(name = "USER_PASSWORD")
-    private null userPassword;
+    private String userPassword;
 
     @Column(name = "DATE_CREATED")
-    private null dateCreated;
+    private Timestamp dateCreated;
 
     @Column(name = "USER_ROLE")
-    private null userRole;
+    private int userRole;
 
 
-    public null getId() {
+    public int getId() {
         return this.id;
     }
 
-    public void setId(null id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public null getUserName() {
+    public String getUserName() {
         return this.userName;
     }
 
-    public void setUserName(null userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public null getUserPassword() {
+    public String getUserPassword() {
         return this.userPassword;
     }
 
-    public void setUserPassword(null userPassword) {
+    public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
 
-    public null getDateCreated() {
+    public Timestamp getDateCreated() {
         return this.dateCreated;
     }
 
-    public void setDateCreated(null dateCreated) {
+    public void setDateCreated(Timestamp dateCreated) {
         this.dateCreated = dateCreated;
     }
 
-    public null getUserRole() {
+    public int getUserRole() {
         return this.userRole;
     }
 
-    public void setUserRole(null userRole) {
+    public void setUserRole(int userRole) {
         this.userRole = userRole;
     }
 }
